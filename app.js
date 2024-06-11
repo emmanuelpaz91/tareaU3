@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
+var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -30,6 +31,20 @@ app.get('/noticias', function(req, res) {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//pool.query('select * from suscriptores').then(function (resultados) {
+//  console.log(resultados)
+//});
+
+//insertar registro
+var obj = {
+  nombre: 'prueba',
+  mail: 'prueba@trucoteca.net'
+}
+
+pool.query('insert into suscriptores set ?', [obj]).then(function (resultados) {
+  console.log(resultados)
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
