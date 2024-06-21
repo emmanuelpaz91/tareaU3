@@ -137,3 +137,17 @@ body {
     font-family: anton, sans-serif;
     font-size: 62px;
   }
+
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  .rounded-container {
+    background-color: #343a40;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }

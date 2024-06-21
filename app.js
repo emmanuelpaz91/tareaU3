@@ -9,6 +9,7 @@ var pool = require('./models/bd');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var loginRouter = require('./routes/admin/login')
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.get('/noticias', function(req, res) {
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/admin/login', loginRouter);
 
 //pool.query('select * from suscriptores').then(function (resultados) {
 //  console.log(resultados)
