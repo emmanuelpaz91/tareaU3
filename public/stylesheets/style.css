@@ -23,6 +23,12 @@ body {
     object-fit: cover;
   }
 
+  .vip-imagen {
+    max-width: 200px;
+    max-height: 1250px;
+    object-fit: scale-down;
+  }
+
   .overlay-text {
     position: absolute;
     bottom: 20px; /* Espacio desde la parte inferior */
@@ -142,7 +148,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    min-height: 50vh;
   }
   .rounded-container {
     background-color: #343a40;
