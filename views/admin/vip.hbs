@@ -1,14 +1,43 @@
 <div class="container mt-4 text-white">
-        <div class="row">
-            <div class="row mb-4">
-                <div class="col-md-4">
-                    <div class="vip-imagen">
-                        <img src="/images/Icono sitio.png" alt="Noticia 1" class="img-fluid">
-                    </div>
+    <div class="row">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="vip-imagen">
+                    <img src="/images/Icono sitio.png" alt="Noticia 1" class="img-fluid">
                 </div>
-                <div class="col-md-8">
-                    <h2>Hola, {{{persona}}}.</h2>
-                    <p>Estamos preparando la página VIP exclusivamente para vos!</p>
-                </div>
-                <a class="btn btn-danger" href="/admin/login/logout" role="button">Cerrar Sesión<i class="fa fa-sign-out"></i></a>
             </div>
+            <div class="col-md-8">
+                <h2>Hola, {{{persona}}}.</h2>
+                <p>Dejá tu truco y facilitale la vida a otro gamer como vos.</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end">
+        <a class="btn btn-danger mb-1" ; href="/admin/login/logout" role="button">Cerrar Sesión <i
+                class="fa fa-sign-out"></i></a>
+    </div>
+    <div class="d-flex justify-content-end">
+        <a class="btn btn-success mb-1" ; href="/admin/vip/agregar" role="button">Nuevo Truco <i class="fas fa-plus"></i></a>
+    </div>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Usuario</th>
+                <th scope="col">Juego</th>
+                <th scope="col">Truco</th>
+                <th scope="col"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each trucos}}
+            <tr>
+                <td>{{usuario}}</td>
+                <td>{{juego}}</td>
+                <td>{{truco}}</td>
+                <td class="text-center"><a class="btn btn-secondary" ; href="/admin/vip/modificar/{{id}}"><i class="fas fa-pencil"></i></a> <a
+                        class="btn btn-secondary" ; href="/admin/vip/eliminar/{{id}}"><i class="fas fa-trash"></i></a></td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>

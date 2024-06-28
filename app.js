@@ -49,6 +49,10 @@ app.get('/nosotros', function(req, res) {
 app.get('/noticias', function(req, res) {
   res.render('noticias', {tytle: 'Noticias'});
 })
+app.get('/lectura', function(req, res) {
+  res.render('lectura', {tytle: 'Lectura'});
+})
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

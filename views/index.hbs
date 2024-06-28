@@ -7,7 +7,7 @@
             <img src="images/Final-Fantasy-9-Remake-01.webp" class="custom-image img-fluid" alt="Imagen 1">
             <div class="overlay"></div>
             <div class="overlay-text">
-                <h1 class="titulo-principal">Final Fantasy IX tendrá su ansiado remake</h1>
+                <h1 class="titulo-principal"><a href="/lectura">Final Fantasy IX tendrá su ansiado remake</a></h1>
                 <p class="bajada-principal">Square anunció oficialmente la adaptación del mítico RPG de PSone a los
                     tiempos modernos</p>
             </div>
@@ -18,7 +18,7 @@
             <img src="images/commandos-origins-20231051913091_1.jpg" class="custom-image img-fluid" alt="Imagen 2">
             <div class="overlay"></div>
             <div class="overlay-text">
-                <h2 class="titulo-secundario">El nuevo Commandos tiene fecha de lanzamiento</h2>
+                <h2 class="titulo-secundario"><a href="/lectura">El nuevo Commandos tiene fecha de lanzamiento</a></h2>
                 <p class="bajada-secundario">La clásica saga de juegos RTS estará próximamente disponible en Steam</p>
             </div>
         </div>
@@ -81,7 +81,7 @@
 <div class="my-4"></div>
 
 <!-- Row 3 -->
-<h2 class="encabezado-seccion text-light text-center" id="Noticias">NOTICIAS</h2>
+<h2 class="encabezado-seccion text-light text-center" id="Noticias"><a href="/noticias">NOTICIAS</a></h2>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
         <div class="card bg-purple text-white h-100">
@@ -145,8 +145,29 @@
 </div>
 <div class="my-4"></div>
 
+<!-- Row 4 TRUCOS -->
+<h2 class="encabezado-seccion text-light text-center" id="Noticias"><a href="/admin/login">TRUCOS</a></h2>
+<div class="row">
+
+    {{#each trucos}}
+    <div class="col-md-2 mb-4">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{juego}}</h5>
+                <h6 class="card-text mb-2">{{usuario}}</h6>
+                <p class="card-text">{{truco}}</p>
+                <a href="/admin/login" class="card-link" style="font-weight: bold;">Agregá el tuyo</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<div class="my-4"></div>
+
 <!-- Row 4 -->
-<form style="background-color: #611e60" action="/" method="post" >
+<h2 class="encabezado-seccion text-light text-center" id="Noticias"><a href="/nosotros">NOSOTROS</a></h2>
+<form style="background-color: #611e60" action="/" method="post">
     <div class="mb-3 text-white" style="width: 30vw;">
         <h2 class="text-white" id="Suscribite">Suscribite a nuestro newsletter</h2>
         <label for="exampleInputEmail1" class="form-label text-white">Email</label>

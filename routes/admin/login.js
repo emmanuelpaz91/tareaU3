@@ -4,7 +4,7 @@ var usuariosModel = require('./../../models/usuariosModel');
 
 router.get('/', function(req, res, next) {
     res.render('admin/login', {
-        layout:'/admin/layout'
+        layout:'admin/layout',
     });
   });
 
